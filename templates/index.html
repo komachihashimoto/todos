@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo App</title>
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <ul>
+        {{range .todos}}
+        <li>{{.Title}}</li>
+        {{end}}
+    </ul>
+</body>
+</html>
