@@ -6,9 +6,20 @@
 </head>
 <body>
     <h1>ToDo List</h1>
+    <form action="/todo" method="post">
+        <input type="text" name="title" placeholder="New ToDo">
+        <button type="submit">Add</button>
+    </form>
     <ul>
         {{range .todos}}
-        <li>{{.Title}}</li>
+        <li>
+            {{.Title}}
+            {{if .Done}}
+            (done)
+            {{else}}
+            (not done)
+            {{end}}
+        </li>
         {{end}}
     </ul>
 </body>
